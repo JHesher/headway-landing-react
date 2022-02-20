@@ -1,0 +1,130 @@
+@import '../../styles/utils/mixins';
+
+.comments {
+  margin-bottom: 8px;
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+
+    @include onTablet {
+      padding: 40px;
+    }
+
+    @include onDesktop {
+      padding: 40px 80px;
+    }
+
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 102, 255, 0.2);
+    background-color: #e6e9f5;
+  }
+
+  &__title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+
+    @include onTablet {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @include onLargeDesktop {
+      font-size: 44px;
+      line-height: 52px;
+    }
+
+    padding: 8px 0;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 24px;
+  }
+
+  &__item {
+    margin-bottom: 16px;
+  }
+
+  &__ratings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+  }
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &__mark-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+  }
+
+  &__mark {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+    color: #0066ff;
+    margin-right: 8px;
+
+    &--store {
+      color: #00bb77;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 32px;
+  }
+
+  &__amount {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.primary {
+  color: #0066ff;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 12px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  
+  padding: 12px;
+  text-align: left;
+
+  &__comment {
+    margin-bottom: 12px;
+  }
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.user {
+  &__photo {
+    width: 32px;
+  }
+
+  &__nick-name {
+    color: rgba(0, 0, 0, 0.4);
+  }
+}

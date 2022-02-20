@@ -1,0 +1,64 @@
+@import '../../styles/utils/mixins.scss';
+
+.header {
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    padding: 8px;
+  }
+
+  &__title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+
+    padding: 8px 0;
+  }
+
+  &__subtitle {
+    text-align: center;
+
+    padding-bottom: 24px;
+  }
+}
+
+.actions {
+  &__action {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-link {
+    display: flex;
+
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin-left: 8px;
+  }
+
+  &__icon {
+    display: flex;
+  }
+
+  &__icon--logo {
+    display: flex;
+
+    @include onTablet {
+      width: 136px;
+    }
+  }
+  
+  &__icon--user-menu {
+    display: flex;
+    margin: auto;
+
+    width: 18px;
+  }
+}

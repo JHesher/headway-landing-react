@@ -1,0 +1,36 @@
+@import '../../../styles/utils/mixins';
+
+.categories {
+  min-width: 100%;
+  overflow-x: auto;
+
+  &__container {
+    display: flex;
+
+    min-width: 900px;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    @include onDesktop {
+      min-width: 1824px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    padding: 10px;
+    white-space: nowrap;
+
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+
+  &__image {
+    padding-right: 8px;
+  }
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}

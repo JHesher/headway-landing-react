@@ -1,0 +1,93 @@
+@import '../../styles/utils/mixins';
+
+.benefits {
+  margin-bottom: 8px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+
+
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 187, 119, 0.4);
+    background: #E6F2E7;
+
+    @include onTablet {
+      padding: 40px;
+    }
+
+    @include onDesktop {
+      padding: 40px 80px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+
+    padding: 8px 0 24px;
+
+    @include onTablet {
+      font-size: 36px;
+      line-height: 44px;
+
+      padding: 8px 0 42px;
+    }
+
+    @include onLargeDesktop {
+      font-size: 44px;
+      line-height: 52px;
+
+      padding: 8px 0 56px;
+    }
+  }
+
+  &__list {
+    @include onDesktop {
+      display: flex;
+      justify-content: space-between;
+      gap: 56px
+    }
+  }
+
+  &__benefit {
+    margin-bottom: 34px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.benefit {
+  box-sizing: border-box;
+  // max-width: 400px;
+  width: 100%;
+
+  &__image-container {
+    margin-bottom: 8px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+}

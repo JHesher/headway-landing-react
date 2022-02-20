@@ -1,0 +1,62 @@
+@import '../../styles/utils/mixins';
+
+.footer {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+
+    @include onTablet {
+      padding: 40px;
+    }
+
+    @include onDesktop {
+      padding: 40px 80px;
+    }
+
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__logo-headway {
+    align-items: left;
+    margin-top: 8px;
+  }
+
+  &__title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+
+    @include onTablet {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @include onLargeDesktop {
+      font-size: 44px;
+      line-height: 52px;
+    }
+
+    margin: 24px 0;
+  }
+
+  &__icons {
+    display: flex;
+    margin-top: 8px;
+  }
+
+  &__icon-link {
+    display: flex;
+    margin-right: 12px;
+  }
+
+  &__icon--logo {
+    @include onTablet {
+      width: 136px;
+    }
+  }
+}
