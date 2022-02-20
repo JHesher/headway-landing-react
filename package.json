@@ -17,9 +17,9 @@
   "scripts": {
     "lint": "eslint ./src --fix",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "build": "rm -rf dist && parcel build ./src/index.html --public-url ./ --no-content-hash",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
