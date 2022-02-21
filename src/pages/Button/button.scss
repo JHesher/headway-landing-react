@@ -2,8 +2,6 @@
 
 .button {
   box-sizing: border-box;
-  position: sticky;
-  bottom: 0;
   margin: 0 auto;
   margin-top: 8px;
 
@@ -18,4 +16,9 @@
   border: solid 1px transparent;
   padding: 20px 0;
   cursor: pointer;
+}
+
+.sticky-button {
+  position: sticky;
+  bottom: 0;
 }

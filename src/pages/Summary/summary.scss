@@ -15,7 +15,7 @@
     background: #ffede1;
 
     @include onTablet {
-      padding: 40px;
+      padding: 40px 15px;
     }
 
     @include onDesktop {
@@ -29,6 +29,7 @@
       display: flex;
       flex-direction: row;
       padding-bottom: 8px;
+      width: 100%;
     }
   }
 
