@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import '../ReadOrListen/readOrListen.scss';
+import './readOrListen.scss';
 
 export const ReadOrListen = () => {
-  const [ isToggle, setToggle ] = useState(true);
-  console.log(isToggle);
+  const [isToggle, setToggle] = useState(true);
 
   const handleClick = (idPhoto, idToggle) => {
     setToggle(!isToggle);
 
     if (isToggle) {
-      document.getElementById(idPhoto).src = "images/phone-read.png";
-      document.getElementById(idToggle).src = "images/svg/toggle/read.svg";
+      document.getElementById(idPhoto).src = 'images/phone-read.png';
+      document.getElementById(idToggle).src = 'images/svg/toggle/read.svg';
     } else {
-      document.getElementById(idPhoto).src = "images/phone-listen.png";
-      document.getElementById(idToggle).src = "images/svg/toggle/listen.svg";
+      document.getElementById(idPhoto).src = 'images/phone-listen.png';
+      document.getElementById(idToggle).src = 'images/svg/toggle/listen.svg';
     }
   };
 
@@ -27,13 +26,16 @@ export const ReadOrListen = () => {
               Read or Listen
             </h1>
             <p className="toggle__subtitle">
-              Commuting, jogging, or stuck in line? Enjoy the best books in a condensed format. Summaries have an audio version, narrated by professional voice actors.
+              Commuting, jogging, or stuck in line? Enjoy the best books
+              in a condensed format. Summaries have an audio version,
+              narrated by professional voice actors.
             </p>
             <div className="toggle__toggle-container">
-              <div className={classNames({'secondary': !isToggle})}>
+              <div className={classNames({ secondary: !isToggle })}>
                 Listen
               </div>
               <button
+                type="button"
                 onClick={() => handleClick('phone', 'toggle')}
                 className={classNames('toggle__button', {
                   'toggle__button--listen': isToggle,
@@ -47,7 +49,7 @@ export const ReadOrListen = () => {
                   id="toggle"
                 />
               </button>
-              <div className={classNames({ 'secondary': isToggle })}>Read</div>
+              <div className={classNames({ secondary: isToggle })}>Read</div>
             </div>
           </div>
 
@@ -62,5 +64,5 @@ export const ReadOrListen = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
